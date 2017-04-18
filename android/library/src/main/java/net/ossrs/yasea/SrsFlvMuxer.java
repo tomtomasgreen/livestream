@@ -100,7 +100,7 @@ public class SrsFlvMuxer {
         if (!connected) {
             Log.i(TAG, String.format("worker: connecting to RTMP server by url=%s\n", url));
             if (publisher.connect(url)) {
-                connected = publisher.publish("live");
+                connected = publisher.publish("record");
             }
             mVideoSequenceHeader = null;
             mAudioSequenceHeader = null;

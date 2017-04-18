@@ -92,6 +92,7 @@ public class SrsCameraView extends GLSurfaceView implements GLSurfaceView.Render
             } catch (IOException ioe) {
                 ioe.printStackTrace();
             }
+            mCamera.startPreview();
         }
     }
 
@@ -307,12 +308,12 @@ public class SrsCameraView extends GLSurfaceView implements GLSurfaceView.Render
 
         mCamera.setDisplayOrientation(mPreviewRotation);
 
-        try {
+        /*try {
             mCamera.setPreviewTexture(surfaceTexture);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        mCamera.startPreview();
+        mCamera.startPreview();*/
 
         return true;
     }

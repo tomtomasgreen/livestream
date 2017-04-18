@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements RtmpHandler.RtmpL
     Button btnSwitchEncoder = null;
 
     private SharedPreferences sp;
-    private String rtmpUrl = "rtmp://ossrs.net/" + getRandomAlphaString(3) + '/' + getRandomAlphaDigitString(5);
+    private String rtmpUrl = "rtmp://10.0.4.73/oflaDemo/testapp";//"rtmp://ossrs.net/" + getRandomAlphaString(3) + '/' + getRandomAlphaDigitString(5);
     private String recPath = Environment.getExternalStorageDirectory().getPath() + "/test.mp4";
 
     private SrsPublisher mPublisher;
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements RtmpHandler.RtmpL
         mPublisher.setRecordHandler(new SrsRecordHandler(this));
         mPublisher.setPreviewResolution(640, 360);
         mPublisher.setOutputResolution(720, 1280);
+        //mPublisher.setOutputResolution(320,240);
         mPublisher.setVideoHDMode();
         mPublisher.startCamera();
 
