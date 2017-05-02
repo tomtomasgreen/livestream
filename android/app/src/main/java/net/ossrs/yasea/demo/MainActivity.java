@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements RtmpHandler.RtmpL
         setContentView(R.layout.activity_main);
 
         // response screen rotation event
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
 
         // restore data.
         sp = getSharedPreferences("Yasea", MODE_PRIVATE);
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements RtmpHandler.RtmpL
         mPublisher.setPreviewResolution(640, 360);
         mPublisher.setOutputResolution(720, 1280);
         //mPublisher.setOutputResolution(320,240);
+        mPublisher.setScreenOrientation(Configuration.ORIENTATION_LANDSCAPE);
         mPublisher.setVideoHDMode();
         mPublisher.startCamera();
 

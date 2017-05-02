@@ -283,6 +283,7 @@ public class SrsPublisher {
             mCameraView.enableEncoding();
         }
         mCameraView.startCamera();
+        mCameraView.restartPreview();
     }
 
     public void setRtmpHandler(RtmpHandler handler) {

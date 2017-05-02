@@ -17,9 +17,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>[source path] folder</name>
+			<name>[source path] classes</name>
 			<type>2</type>
-			<location>/path/to/classes/folder</location>
+			<location>/Users/nnit/Documents/live/flash/classes</location>
 		</link>
 	</linkedResources>
 </projectDescription>

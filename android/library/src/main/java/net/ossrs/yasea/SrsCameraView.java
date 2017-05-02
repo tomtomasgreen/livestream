@@ -303,7 +303,8 @@ public class SrsCameraView extends GLSurfaceView implements GLSurfaceView.Render
                 params.setFlashMode(supportedFlashModes.get(0));
             }
         }
-
+        params.set("max-exposure-compensation", 1);
+        params.set("min-exposure-compensation", -1);
         mCamera.setParameters(params);
 
         mCamera.setDisplayOrientation(mPreviewRotation);
@@ -316,6 +317,14 @@ public class SrsCameraView extends GLSurfaceView implements GLSurfaceView.Render
         mCamera.startPreview();*/
 
         return true;
+    }
+    public void restartPreview(){
+        try {
+            mCamera.setPreviewTexture(surfaceTexture);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mCamera.startPreview();
     }
 
     public void stopCamera() {
